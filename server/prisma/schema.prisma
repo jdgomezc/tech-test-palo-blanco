@@ -1,0 +1,27 @@
+// This is your Prisma schema file,
+// learn more about it in the docs: https://pris.ly/d/prisma-schema
+
+generator client {
+  provider = "prisma-client"
+  output   = "../src/generated/prisma"
+}
+
+datasource db {
+  provider = "mysql"
+}
+
+model User {
+  id        Int        @id @default(autoincrement())
+  username  String
+  password  String
+  investors Investor[]
+}
+
+model Investor {
+  id              Int     @id @default(autoincrement())
+  name            String
+  surname         String
+  investment      Float
+  registeredById  Int
+  registeredBy    User    @relation(fields: [registeredById], references: [id])
+}
