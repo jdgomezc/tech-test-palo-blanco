@@ -104,13 +104,13 @@ export default function Dashboard() {
           <div className="flex items-center gap-2">
             <Link
               to="/"
-              className="rounded-lg px-3 py-2 text-sm text-stone-600 hover:text-stone-900 hover:bg-stone-100 transition shrink-0"
+              className="cursor-pointer rounded-lg px-3 py-2 text-sm text-stone-600 hover:text-stone-900 hover:bg-stone-100 transition shrink-0"
             >
               Inicio
             </Link>
             <button
               onClick={logout}
-              className="rounded-lg px-3 py-2 text-sm text-stone-600 hover:text-stone-900 hover:bg-stone-100 transition shrink-0"
+              className="cursor-pointer rounded-lg px-3 py-2 text-sm text-stone-600 hover:text-stone-900 hover:bg-stone-100 transition shrink-0"
             >
               Cerrar sesión
             </button>
@@ -196,7 +196,7 @@ export default function Dashboard() {
               <button
                 type="submit"
                 disabled={isPending}
-                className="rounded-xl bg-emerald-600 hover:bg-emerald-500 text-white font-medium px-5 py-2.5 flex items-center gap-2 transition disabled:opacity-70 disabled:cursor-not-allowed shadow-md shadow-emerald-900/20"
+                className="cursor-pointer rounded-xl bg-emerald-600 hover:bg-emerald-500 text-white font-medium px-5 py-2.5 flex items-center gap-2 transition disabled:opacity-70 disabled:cursor-not-allowed shadow-md shadow-emerald-900/20"
               >
                 {isPending ? (
                   <>
@@ -251,7 +251,7 @@ export default function Dashboard() {
                           {inv.id}
                         </span>
                       </span>
-                      <span className="text-lg font-medium text-stone-500/85">
+                      <span className="text-lg font-medium text-stone-500">
                         Q {inv.investment.toLocaleString("en-US")}
                       </span>
                     </div>
@@ -321,8 +321,8 @@ export default function Dashboard() {
                           {inv.id}
                         </span>
                       </span>
-                      <span className="text-lg font-medium text-stone-400">
-                        {inv.investment.toLocaleString("es")}
+                      <span className="text-lg font-medium text-stone-500">
+                        Q {inv.investment.toLocaleString("en-US")}
                       </span>
                     </div>
                     {inv.registeredBy && (
@@ -368,7 +368,7 @@ export default function Dashboard() {
                   if (Number.isInteger(id) && id >= 1) setStateSearchedId(id);
                   else setStateSearchedId(null);
                 }}
-                className="rounded-lg bg-emerald-600 hover:bg-emerald-500 text-white font-medium px-4 py-2 text-sm transition"
+                className="cursor-pointer rounded-lg bg-emerald-600 hover:bg-emerald-500 text-white font-medium px-4 py-2 text-sm transition"
               >
                 Buscar estado
               </button>
@@ -403,8 +403,8 @@ export default function Dashboard() {
                             </span>
                           </span>
                           {found && (
-                            <span className="text-lg font-medium text-stone-400">
-                              {found.investment.toLocaleString("es")}
+                            <span className="text-lg font-medium text-stone-500">
+                              Q {found.investment.toLocaleString("en-US")}
                             </span>
                           )}
                         </div>

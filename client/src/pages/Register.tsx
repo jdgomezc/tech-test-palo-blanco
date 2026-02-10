@@ -93,7 +93,7 @@ export default function Register() {
             <button
               type="submit"
               disabled={isPending}
-              className="w-full rounded-xl bg-emerald-600 hover:bg-emerald-500 text-white font-medium py-3 flex items-center justify-center gap-2 transition disabled:opacity-70 disabled:cursor-not-allowed shadow-lg shadow-emerald-900/20 hover:shadow-emerald-800/25"
+              className="cursor-pointer w-full rounded-xl bg-emerald-600 hover:bg-emerald-500 text-white font-medium py-3 flex items-center justify-center gap-2 transition disabled:opacity-70 disabled:cursor-not-allowed shadow-lg shadow-emerald-900/20 hover:shadow-emerald-800/25"
             >
               {isPending ? (
                 <>
@@ -109,7 +109,7 @@ export default function Register() {
             ¿Ya tienes cuenta?{" "}
             <Link
               to="/login"
-              className="text-emerald-600 hover:text-emerald-700 font-medium transition"
+              className="cursor-pointer text-emerald-600 hover:text-emerald-700 font-medium transition"
             >
               Iniciar sesión
             </Link>
