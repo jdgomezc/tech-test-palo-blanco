@@ -4,6 +4,12 @@
 **Fecha:** Lunes 9 de febrero de 2026  
 **Prueba técnica** para plaza de desarrollador full stack.
 
+### [Demo en video](https://youtu.be/N9_IDfWrUwU)
+
+[![Ver demo en YouTube](https://img.youtube.com/vi/N9_IDfWrUwU/maxresdefault.jpg)](https://youtu.be/N9_IDfWrUwU)
+
+_Haz clic en la miniatura para ver la demo._
+
 ---
 
 ## Descripción del proyecto
