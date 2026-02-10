@@ -89,14 +89,19 @@ export default function Dashboard() {
   return (
     <div className="min-h-screen bg-stone-50/80 text-stone-900">
       <header className="border-b border-stone-200 bg-white/80 backdrop-blur-sm sticky top-0 z-10 shadow-sm shadow-stone-100">
-        <div className="max-w-5xl mx-auto px-4 py-4 flex items-center">
-          <div className="flex-1 flex items-center gap-3 min-w-0">
+        <div className="max-w-5xl mx-auto px-4 py-4 flex justify-between items-center">
+          <div className="flex items-center gap-3 min-w-0">
             {username && (
               <span className="text-sm text-stone-600 shrink-0">
                 Bienvenido,{" "}
                 <span className="font-medium text-stone-800">{username}</span>
               </span>
             )}
+          </div>
+          <div className="flex-1 flex justify-center">
+            <CompanyTitle tagline="" asLink size="compact" />
+          </div>
+          <div className="flex items-center gap-2">
             <Link
               to="/"
               className="rounded-lg px-3 py-2 text-sm text-stone-600 hover:text-stone-900 hover:bg-stone-100 transition shrink-0"
@@ -110,10 +115,6 @@ export default function Dashboard() {
               Cerrar sesión
             </button>
           </div>
-          <div className="flex-1 flex justify-center shrink-0">
-            <CompanyTitle tagline="" asLink size="compact" />
-          </div>
-          <div className="flex-1 min-w-0" aria-hidden />
         </div>
       </header>
       <main className="max-w-5xl mx-auto px-4 py-10 space-y-8">
